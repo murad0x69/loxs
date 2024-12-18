@@ -19,7 +19,7 @@ mkdir -p "$output_dir"
 
 # Step 1: Run katana with passive sources and save output to a unified file (output/output.txt)
 echo "Running katana with passive sources (waybackarchive, commoncrawl, alienvault)..."
-echo "$website_url" | katana -ps -pss waybackarchive,commoncrawl,alienvault -f qurl | uro > "$output_dir/output.txt"
+echo "$website_url" | katana  waybackarchive,commoncrawl,alienvault -f qurl | uro > "$output_dir/output.txt"
 
 # Step 2: Run katana actively with depth 5 and append results to output/output.txt
 echo "Running katana actively with depth 5..."
